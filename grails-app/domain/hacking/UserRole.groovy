@@ -12,6 +12,13 @@ class UserRole implements Serializable {
 	User user
 	Role role
 
+	UserRole(User u, Role r) {
+		this()
+		user = u
+		role = r
+	}
+
+	@Override
 	boolean equals(other) {
 		if (!(other instanceof UserRole)) {
 			return false
@@ -21,6 +28,7 @@ class UserRole implements Serializable {
 		other.role?.id == role?.id
 	}
 
+	@Override
 	int hashCode() {
 		def builder = new HashCodeBuilder()
 		if (user) builder.append(user.id)
