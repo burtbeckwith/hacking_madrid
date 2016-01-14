@@ -13,7 +13,8 @@ class OrgUser {
 		this.organization = organization
 		this.user = user
 	}
+
 	static constraints = {
-		organization unique: 'user'
+		user unique: 'organization'
 	}
 }
